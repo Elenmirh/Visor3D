@@ -30,7 +30,9 @@
             launchIntoFullscreen(document.documentElement);
             }
         
-        FullScreen();
+        document.onmousedown=FullScreen;
+
+        //FullScreen();
 
         function launchIntoFullscreen(element) {
             if(element.requestFullscreen) {
