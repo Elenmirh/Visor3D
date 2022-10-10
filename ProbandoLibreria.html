@@ -19,10 +19,12 @@
     
     <body>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.js">
-            barscene=newTHREE.Scene();
-            barcamera=newTHREE.PerspectiveCamera();
-
-
+            barscene=new THREE.Scene();
+            barcamera=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight);
+            barrenderer=new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth,window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+            renderer.render(scene,camera);
         </script>
 
         <!--<image id="foto" src="images/salpicadura.jpg"></image>-->
