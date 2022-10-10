@@ -20,11 +20,12 @@
     <body>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.js">
             barscene=new THREE.Scene();
+            scene.background=new THREE.Color(0X2A3B4C);
             barcamera=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight);
             barrenderer=new THREE.WebGLRenderer();
             renderer.setSize(window.innerWidth,window.innerHeight);
             document.body.appendChild(renderer.domElement);
-            renderer.render(scene,camera);
+            renderer.render(scene,camera);            
         </script>
 
         <!--<image id="foto" src="images/salpicadura.jpg"></image>-->
