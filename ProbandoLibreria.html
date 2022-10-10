@@ -29,7 +29,8 @@
             var geometry=new THREE.BoxGeometry();
             var material=new THREE.MeshBasicMaterial({color: 0X00FF00});
             var cube=new THREE.Mesh(geometry,material);
-            renderer.render(scene,camera);                        
+            scene.add(cube);
+            renderer.render(scene,camera);                
         </script>
     </body>
 
