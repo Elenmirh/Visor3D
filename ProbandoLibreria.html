@@ -19,10 +19,10 @@
     
     <body>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.js">
-            barscene=new THREE.Scene();
+            var scene=new THREE.Scene();
             scene.background=new THREE.Color(0X2A3B4C);
-            barcamera=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight);
-            barrenderer=new THREE.WebGLRenderer();
+            var camera=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight);
+            var renderer=new THREE.WebGLRenderer();
             renderer.setSize(window.innerWidth,window.innerHeight);
             document.body.appendChild(renderer.domElement);
             var geometry=new THREE.BoxGeometry();
