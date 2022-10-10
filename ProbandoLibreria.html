@@ -25,9 +25,9 @@
             barrenderer=new THREE.WebGLRenderer();
             renderer.setSize(window.innerWidth,window.innerHeight);
             document.body.appendChild(renderer.domElement);
-            bargeometry=new THREE.BoxGeometry();
-            barmaterial=new THREE.MeshBasicMaterial(color: 0X00FF00);
-            barcube=new THREE.Mesh(BoxGeometry,Material);
+            var geometry=new THREE.BoxGeometry();
+            var material=new THREE.MeshBasicMaterial(color: 0X00FF00);
+            var cube=new THREE.Mesh(BoxGeometry,Material);
             renderer.render(scene,camera);                        
         </script>
     </body>
