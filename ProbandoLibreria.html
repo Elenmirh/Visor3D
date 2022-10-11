@@ -28,12 +28,17 @@
             document.body.appendChild(renderer.domElement);
             var geometry_box=new THREE.BoxGeometry(2,2,2,5,5,5);
             var geometry_circle=new THREE.CircleGeometry(5,200,200);
+            var geometry_spehere=new THREE.SphereGeometry(5,20);
             var material=new THREE.MeshBasicMaterial({color: 0XFF0000,wireframe:true});
+            
             var cube=new THREE.Mesh(geometry_box,material);
             scene.add(cube);
 
             var circle=new THREE.Mesh(geometry_circle,material);
             scene.add(circle);
+
+            var sphere=new THREE.Mesh(geometry_spehere,material);
+            scene.add(sphere);
 
             camera.position.z=5;
 
@@ -44,6 +49,7 @@
                 cube.position.x=5;
                 circle.rotation.x+=0.01;
                 circle.rotation.y+=0.01;
+                sphere.position.y=5;
                 renderer.render(scene,camera);
             }           
             
