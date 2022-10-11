@@ -27,7 +27,7 @@
             renderer.setSize(window.innerWidth,window.innerHeight);
             document.body.appendChild(renderer.domElement);
             var geometry_box=new THREE.BoxGeometry(2,2,2,5,5,5);
-            var geometry_circle=new THREE.CircleGeometry(50,200);
+            var geometry_circle=new THREE.CircleGeometry(5,200);
             var material=new THREE.MeshBasicMaterial({color: 0XFF0000,wireframe:true});
             var cube=new THREE.Mesh(geometry_box,material);
             scene.add(cube);
