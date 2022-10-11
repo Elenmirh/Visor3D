@@ -29,7 +29,7 @@
             var geometry_box=new THREE.BoxGeometry(2,2,2,5,5,5);
             var geometry_circle=new THREE.CircleGeometry(2.5,200,200);
             var geometry_spehere=new THREE.SphereGeometry(5,20,20);
-            var material=new THREE.MeshBasicMaterial({color: 0XFF0000,wireframe:true});
+            var material=new THREE.MeshBasicMaterial({color: 0XFF0000,wireframe:false});
             
             var cube=new THREE.Mesh(geometry_box,material);
             scene.add(cube);
