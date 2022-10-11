@@ -26,12 +26,13 @@
             var renderer=new THREE.WebGLRenderer();
             renderer.setSize(window.innerWidth,window.innerHeight);
             document.body.appendChild(renderer.domElement);
-            var geometry=new THREE.BoxGeometry();
+            var geometry_box=new THREE.BoxGeometry();
+            var geometry_circle=new THREE.CircleGeometry();
             var material=new THREE.MeshBasicMaterial({color: 0XFF0000,wireframe:true});
-            var cube=new THREE.Mesh(geometry,material);
+            var cube=new THREE.Mesh(geometry_box,material);
             scene.add(cube);
 
-            var circle=new THREE.Mesh(new THREE.CircleGeometry,material);
+            var circle=new THREE.Mesh(geometry_circle,material);
             scene.add(circle);
 
             camera.position.z=5;
@@ -40,6 +41,8 @@
                 requestAnimationFrame(animate);
                 cube.rotation.x+=0.01;
                 cube.rotation.y+=0.01;
+                circle.rotation.x+=0.01;
+                circle.rotation.y+=0.01;
                 renderer.render(scene,camera);
             }           
             
